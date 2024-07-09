@@ -8,7 +8,7 @@
             var settings = new SettingsManager();
 
             var settingsMenu = new GetMenu(settings, config);
-            settingsMenu.Menu(new SettingsMenu());
+            settingsMenu.OpenMenu(new SettingsMenu());
 
             StartGame(config.NumberOfGuess, new GenerateNumber(config.LowerDiapozon, config.UpperDiapozon).Number);
 

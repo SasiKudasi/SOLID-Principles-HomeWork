@@ -12,7 +12,7 @@
             _configurable = configurable;
         }
 
-        public void Menu(ISendMenu menu)
+        public void OpenMenu(ISendMenu menu)
         {
             menu.SendMenu(_configurable, _settingsManager);            
         }
