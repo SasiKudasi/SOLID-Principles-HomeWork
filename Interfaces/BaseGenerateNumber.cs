@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID_Principles
+namespace SOLID_Principles.Interfaces
 {
     public class BaseGenerateNumber : IGenerateNumbers
-    {  
+    {
 
         public int GenerateNewNuber(int lowerDiapozon, int upperDiapozon)
         {

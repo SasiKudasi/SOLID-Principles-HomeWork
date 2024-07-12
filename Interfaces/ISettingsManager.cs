@@ -1,4 +1,4 @@
-﻿namespace SOLID_Principles
+﻿namespace SOLID_Principles.Interfaces
 {
     public interface ISettingsManager
     {

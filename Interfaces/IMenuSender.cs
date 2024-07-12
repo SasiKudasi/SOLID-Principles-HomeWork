@@ -1,6 +1,6 @@
-﻿namespace SOLID_Principles
+﻿namespace SOLID_Principles.Interfaces
 {
-    public interface ISendMenu
+    public interface IMenuSender
     {
         void SendMenu(IConfigurable configurable, ISettingsManager manager);
     }

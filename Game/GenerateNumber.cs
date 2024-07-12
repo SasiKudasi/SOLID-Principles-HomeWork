@@ -1,4 +1,6 @@
-﻿namespace SOLID_Principles
+﻿using SOLID_Principles.Interfaces;
+
+namespace SOLID_Principles.Game
 {
     public class GenerateNumber : BaseGenerateNumber
     {

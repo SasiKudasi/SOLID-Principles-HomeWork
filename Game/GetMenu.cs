@@ -1,10 +1,12 @@
-﻿namespace SOLID_Principles
+﻿using SOLID_Principles.Interfaces;
+
+namespace SOLID_Principles.Game
 {
     public class GetMenu
     {
         private ISettingsManager _settingsManager;
         private IConfigurable _configurable;
-        
+
 
         public GetMenu(ISettingsManager settingsManager, IConfigurable configurable)
         {
@@ -12,9 +14,9 @@
             _configurable = configurable;
         }
 
-        public void OpenMenu(ISendMenu menu)
+        public void OpenMenu(IMenuSender menu)
         {
-            menu.SendMenu(_configurable, _settingsManager);            
+            menu.SendMenu(_configurable, _settingsManager);
         }
 
     }
