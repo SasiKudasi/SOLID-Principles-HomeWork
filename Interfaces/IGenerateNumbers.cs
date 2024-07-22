@@ -2,6 +2,6 @@
 {
     public interface IGenerateNumbers
     {
-        int GenerateNewNuber(int lowerDiapozon, int upperDiapozon);
+        int GenerateNewNumber(int lowerDiapozon, int upperDiapozon);
     }
 }

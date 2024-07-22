@@ -28,14 +28,14 @@ namespace SOLID_Principles.Game
                 if (userAnswer == randomNum)
                 {
                     _message.SendMessage("Число угаданно!");
-                    break;
+                    return;
                 }
                 else
                     numberOfGuess--;
                 if (numberOfGuess == 0)
                 {
                     _message.SendMessage($"Закончились попытки. Было загаданно число {randomNum}.");
-                    break;
+                    return;
                 }
             }
         }

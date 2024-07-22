@@ -2,6 +2,6 @@
 {
     public interface IMenuSender
     {
-        void SendMenu(IConfigurable configurable, ISettingsManager manager);
+        void SendMenu(ISettingsManager manager);
     }
 }

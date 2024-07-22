@@ -6,39 +6,43 @@ namespace SOLID_Principles.Settings
     {
         private IMessageSender _message;
         private IInputHandler _input;
-
-        public SettingsManager(IMessageSender message, IInputHandler input)
+        private IConfigurable _config;
+        public SettingsManager(IMessageSender message, IInputHandler input, IConfigurable configurable)
         {
             _message = message;
-            _input = input;
+            _input = input;   
+            _config = configurable;
         }
 
-        public void SetLowerDiapozon(ref IConfigurable configurable)
+        public void SetLowerDiapozon()
         {
             _message.SendMessage("Нижний диапозон");
-            configurable.LowerDiapozon = _input.InputNum();
+            _config.LowerDiapozon = _input.InputNum();
         }
 
-        public void SetNumberOfGuess(ref IConfigurable configurable)
+        public void SetNumberOfGuess()
         {
             _message.SendMessage("Введите колличество отгадываний");
-            configurable.NumberOfGuess = _input.InputNum();
+            _config.NumberOfGuess = _input.InputNum();
 
         }
 
-        public void SetUpperDiapozon(ref IConfigurable configurable)
+        public void SetUpperDiapozon()
         {
             _message.SendMessage("Введите верхний диапозон");
-            configurable.UpperDiapozon = _input.InputNum();
+            _config.UpperDiapozon = _input.InputNum();
 
         }
 
-        public void SetUserName(ref IConfigurable configurable)
+        public void SetUserName()
         {
             _message.SendMessage("Введите ваше имя");
-            configurable.UserName = _input.InputString();
+            _config.UserName = _input.InputString();
         }
-
+        public IConfigurable GetConfigure()
+        {
+            return _config;
+        }
 
     }
 }

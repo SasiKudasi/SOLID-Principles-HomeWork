@@ -13,7 +13,7 @@ namespace SOLID_Principles.Settings
             _input = input;
         }
 
-        public void SendMenu(IConfigurable configurable, ISettingsManager manager)
+        public void SendMenu(ISettingsManager manager)
         {
             int key = 0;
             while (key != 5)
@@ -28,21 +28,22 @@ namespace SOLID_Principles.Settings
                 switch (key)
                 {
                     case 1:
-                        manager.SetUserName(ref configurable);
+                        manager.SetUserName();
                         break;
                     case 2:
-                        manager.SetNumberOfGuess(ref configurable);
+                        manager.SetNumberOfGuess();
                         break;
                     case 3:
-                        manager.SetLowerDiapozon(ref configurable);
+                        manager.SetLowerDiapozon();
                         break;
                     case 4:
-                        manager.SetUpperDiapozon(ref configurable);
+                        manager.SetUpperDiapozon();
                         break;
 
                 }
 
             }
+            IConfigurable configurable = manager.GetConfigure();
             _message.SendMessage($"{configurable.UserName}, вы успешно изменили настройки.\n"
                  + $"Колличество попыток на угадывание числа: {configurable.NumberOfGuess}\n" +
                  $"Нижний диапозон: {configurable.LowerDiapozon}\n" +
